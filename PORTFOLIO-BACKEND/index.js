@@ -30,8 +30,7 @@ app.get('/api/content', (req, res) => {
 
 // WebSocket connection handling
 wss.on('connection', (ws) => {
-  console.log('New client connected');
-
+  
   // Send current content to new client
   ws.send(JSON.stringify({ type: 'init', content: editorContent }));
 
