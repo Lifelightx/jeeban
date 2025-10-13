@@ -8,7 +8,7 @@ const MessageEditor = ({ initialContent = '', onChange }) => {
 
   useEffect(() => {
     // Connect to WebSocket server
-    const ws = new WebSocket('https://jeeban.vercel.app');
+    const ws = new WebSocket('https://jeeban-portfolio-backend.onrender.com');
     wsRef.current = ws;
 
     ws.onopen = () => {
