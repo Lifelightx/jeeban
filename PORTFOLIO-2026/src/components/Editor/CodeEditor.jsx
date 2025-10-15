@@ -24,7 +24,7 @@ const CodeEditor = ({ activeFile }) => {
     if (editableFiles.includes(activeFile)) {
       // Load from localStorage or start empty
       const saved = localStorage.getItem(`file_${activeFile}`);
-      setEditableContent(saved || '// Start typing your collaborative code here...');
+      setEditableContent(saved || '// Connecting to server...');
     } else {
       setEditableContent(getFileContent(activeFile));
     }
